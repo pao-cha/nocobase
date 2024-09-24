@@ -25,13 +25,13 @@ import {
 
 import { useEmailSettingsFormRequest } from './EmailSettingsFormProvider';
 
-const mapConfigurationCollection = {
-  name: 'samplesMapConfiguration',
+const emailConfigurationCollection = {
+  name: 'emailConfiguration',
   filterTargetKey: 'id',
   fields: [
     {
       type: 'string',
-      name: 'key',
+      name: 'imapServerAccount',
       interface: 'input',
       uiSchema: {
         type: 'string',
@@ -42,7 +42,95 @@ const mapConfigurationCollection = {
     },
     {
       type: 'string',
-      name: 'secret',
+      name: 'imapServerUrl',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'imapServerSecret',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'imapServerPort',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'imapServerSSL',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'smtpServerAccount',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'smtpServerUrl',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'smtpServerSecret',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'smtpServerPort',
+      interface: 'input',
+      uiSchema: {
+        type: 'string',
+        title: 'Secret',
+        required: true,
+        'x-component': 'Input',
+      },
+    },
+    {
+      type: 'string',
+      name: 'smtpServerSSL',
       interface: 'input',
       uiSchema: {
         type: 'string',
@@ -60,7 +148,7 @@ const schema: ISchema = {
   'x-component': 'CardItem',
   'x-decorator': 'DataBlockProvider',
   'x-decorator-props': {
-    collection: mapConfigurationCollection.name,
+    collection: emailConfigurationCollection.name,
     action: 'get',
   },
   properties: {
@@ -128,7 +216,7 @@ const useSubmitActionProps = (): ActionProps => {
 
 export const EmailSettingsForm = () => {
   return (
-    <ExtendCollectionsProvider collections={[mapConfigurationCollection]}>
+    <ExtendCollectionsProvider collections={[emailConfigurationCollection]}>
       <SchemaComponent schema={schema} scope={{ useFormBlockProps, useSubmitActionProps }} />
     </ExtendCollectionsProvider>
   );
