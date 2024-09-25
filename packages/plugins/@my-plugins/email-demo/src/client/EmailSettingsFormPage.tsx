@@ -12,7 +12,7 @@
  * @Author: mingyu.guo
  * @Date: 2024-09-20 15:11:04
  * @LastEditors: mingyu.guo
- * @LastEditTime: 2024-09-23 19:07:41
+ * @LastEditTime: 2024-09-25 14:30:50
  */
 /**
  * This file is part of the NocoBase (R) project.
@@ -31,12 +31,12 @@ interface EmailSettings {
   imapServerUrl: string;
   imapServerSecret: string;
   imapServerPort: string;
-  imapServerSSL: string;
+  imapServerSSL: boolean;
   stmpServerAccount: string;
   stmpServerUrl: string;
   stmpServerSecret: string;
   stmpServerPort: string;
-  stmpServerSSL: string;
+  stmpServerSSL: boolean;
 }
 export const EmailSettingsFormPage = () => {
   const { data, loading } = useRequest<{ data?: EmailSettings }>({

@@ -1,5 +1,9 @@
 {
   "name": "@my-plugins/email-demo",
+  "displayName": "Email plugin",
+  "displayName.zh-CN": "邮箱插件",
+  "description": "Email Plugin",
+  "description.zh-CN": "邮箱插件",
   "version": "1.3.22-beta",
   "main": "dist/server/index.js",
   "dependencies": {},

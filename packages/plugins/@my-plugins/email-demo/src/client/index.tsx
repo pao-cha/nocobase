@@ -13,11 +13,12 @@ import { name } from '../../package.json';
 import { EmailSettingsForm } from './EmailSettingsForm';
 import { EmailSettingsFormPage } from './EmailSettingsFormPage';
 import { EmailSettingsFormProvider } from './EmailSettingsFormProvider';
+import { NAMESPACE } from '../locale';
 
 export class EmailSettingFormClient extends Plugin {
   async load() {
     this.app.pluginSettingsManager.add(name, {
-      title: 'Plugin Settings Form',
+      title: `{{t("邮件配置", { ns: "${NAMESPACE}" })}}`,
       icon: 'FormOutlined',
       Component: EmailSettingsForm,
     });
