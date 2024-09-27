@@ -7,6 +7,22 @@
  * For more information, please refer to: https://www.nocobase.com/agreement.
  */
 
+/*
+ * @name:
+ * @Author: mingyu.guo
+ * @Date: 2024-09-20 15:09:59
+ * @LastEditors: mingyu.guo
+ * @LastEditTime: 2024-09-25 15:46:21
+ */
+/**
+ * This file is part of the NocoBase (R) project.
+ * Copyright (c) 2020-2024 NocoBase Co., Ltd.
+ * Authors: NocoBase Team.
+ *
+ * This project is dual-licensed under AGPL-3.0 and NocoBase Commercial License.
+ * For more information, please refer to: https://www.nocobase.com/agreement.
+ */
+
 import { Plugin } from '@nocobase/server';
 import { namespace } from '..';
 import { downloadXlsxTemplate, importXlsx } from './actions';
